@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    FILE *fp;
+    char c;
+    int count = 0;
+
+    fp = fopen("data.txt", "r");
+
+    if(fp == NULL) {
+        printf("File could not be opened.");
+        return 1;
+    }
+
+    while(1) {
+
+        c = fgetc(fp);
+
+        if(feof(fp)) {
+            break;
+        }
+
+        count++;
+    }
+
+    fclose(fp);
+
+    printf("Number of characters = %d", count);
+
+    return 0;
+}

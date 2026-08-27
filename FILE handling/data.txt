@@ -1,0 +1,4 @@
+Name: Roza 
+ID:1234
+Age:20
+cd "c:\chapter 0\FILE handling\" ; if ($?) { gcc EOF.c -o EOF } ; if ($?) { .\EOF }
