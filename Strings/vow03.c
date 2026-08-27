@@ -10,12 +10,7 @@ int main()
 
     for(i = 0; str[i] != '\0'; i++)
     {
-        if(str[i] != 'a' && str[i] != 'e' &&
-           str[i] != 'i' && str[i] != 'o' &&
-           str[i] != 'u' &&
-           str[i] != 'A' && str[i] != 'E' &&
-           str[i] != 'I' && str[i] != 'O' &&
-           str[i] != 'U')
+        if(str[i] != 'a' && str[i] != 'e' &&str[i] != 'i' && str[i] != 'o' &&str[i] != 'u' &&str[i] != 'A' && str[i] != 'E' &&str[i] != 'I' && str[i] != 'O' &&str[i] != 'U')
         {
             newStr[j] = str[i];
             j++;
