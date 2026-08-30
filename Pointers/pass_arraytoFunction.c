@@ -11,5 +11,7 @@ void printnum(int *ptr, int len){
     int i;
     for(i=0;i<len;i++){
         printf("(ptr+%d)=%d\n",i,*(ptr+i));
+        printf("ptr[%d]= %d \n",i, ptr[i]);//same
+        
     }
 }
