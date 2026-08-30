@@ -5,16 +5,16 @@ int main(){
     FILE *fp;
     fp=fopen("data.txt","w");
 
-    if(fp==NULL){
-        printf("File couldnt be opened.");
-        return 1;
+    if(fp!=NULL){
+        printf("File opened.");
+        fclose(fp);
     }
+    
     fprintf(fp, "Name: Roza \n");
     fprintf(fp, "ID:1234\n");
     fprintf(fp,"Age:20\n");
-
-    fclose(fp);
-
+    
+    
     printf("Data written successfully");
     
      return 0;

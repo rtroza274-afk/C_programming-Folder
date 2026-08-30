@@ -12,14 +12,7 @@ int main() {
         return 1;
     }
 
-    while(1) {
-
-        c = fgetc(fp);
-
-        if(feof(fp)) {
-            break;
-        }
-
+    while((c = fgetc(fp))!= EOF) {
         count++;
     }
 
