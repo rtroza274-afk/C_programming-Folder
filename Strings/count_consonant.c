@@ -12,11 +12,11 @@ int main(){
         if((str[i]>='A'&& str[i]<='Z')||
             (str[i]>='a'&& str[i]<='z')){
 
-                 if(str[i]!='A'||str[i]!='E'||
-                    str[i]!='I'||str[i]!='O'||
-                    str[i]!='U'||
-                    str[i]!='a'||str[i]!='e'||
-                    str[i]!='i'||str[i]!='o'||
+                 if(str[i]!='A'&&str[i]!='E'&&
+                    str[i]!='I'&&str[i]!='O'&&
+                    str[i]!='U'&&
+                    str[i]!='a'&&str[i]!='e'&&
+                    str[i]!='i'&&str[i]!='o'&&
                     str[i]!='u'){
                         count++;
                     }

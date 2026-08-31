@@ -6,7 +6,7 @@
     char major[20];
  };
 int main(){
-    struct student s1={"raiana",123,"CSE"};
+    struct student s1={"raiana roza",123,"CSE"};
 
     printf("Name: %s\n",s1.name);
     printf("STUDENT ID: %d\n",s1.ID);

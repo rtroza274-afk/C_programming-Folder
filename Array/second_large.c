@@ -25,6 +25,7 @@ int main(){
             smallest = arr[i];
         }
         else if(arr[i]<secSmallest && arr[i] != smallest){
+            secSmallest=arr[i];
          
         if(arr[i]>largest){
             secLargest = largest;

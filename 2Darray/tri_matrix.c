@@ -77,6 +77,20 @@ void printReverseDiagonal(int n, int a[n][n]) {
         printf("\n");
     }
 }
+void printBoundaryMatrix(int n, int a[n][n]){
+    printf("\n bounday Matrix:\n");
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+             if (i == 0 || i == n - 1 ||
+                j == 0 || j == n - 1) {
+
+                printf("%d ", a[i][j]);
+            }else
+                printf("  ");
+        }
+        printf("\n");
+    }
+}
 
 int main() {
     int n;
@@ -98,6 +112,7 @@ int main() {
     printLowerLeft(n, A);
     printDiagonal(n, A);
     printReverseDiagonal(n, A);
+    printBoundaryMatrix(n,A);
 
     return 0;
 }
