@@ -17,7 +17,10 @@ int main(){
     *pc=2;
     printf("Address of c: %d\n",&c);
     printf("Value of c: %d\n",c);
-
+    printf("%d \n",&*pc);
+    printf("%d \n",*&pc);
+ 
+    printf("%d \n",*&c);
 
      return 0;
 }

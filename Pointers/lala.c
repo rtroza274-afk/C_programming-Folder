@@ -1,4 +1,6 @@
 #include<stdio.h>
+//random number selection and value-address
+
 int *getnumber();
 int main(){
     int *p;

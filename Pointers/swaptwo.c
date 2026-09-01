@@ -1,11 +1,11 @@
 #include<stdio.h>
 
-    void swap(int *a, int *b){
+    void swap(int *x, int *y){
         int temp;
 
-        temp=*a;
-        *a=*b;
-        *b=temp;
+        temp=*x;
+        *x=*y;
+        *y=temp;
     }
     int main(){
         int a=10,b=20;

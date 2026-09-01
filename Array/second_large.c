@@ -32,7 +32,7 @@ int main(){
             largest = arr[i];
         }
         else if(arr[i]>secLargest && arr[i] != largest){
-            secLargest=arr[i];
+            secLargest=arr[i];}
         }
     }printf("2nd smallest = %d\n", secSmallest);
     printf("2nd largest = %d\n", secLargest);
