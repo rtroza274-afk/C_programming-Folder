@@ -1,29 +1,58 @@
 #include <stdio.h>
 
-int main()
+int det(int n, int a[n][n])
 {
-    int a[3][3];
-    int i, j;
-    int det;
+    if (n == 1)
+        return a[0][0];
 
-    // Input matrix
-    printf("Enter elements of 3x3 matrix:\n");
+    if (n == 2)
+        return a[0][0] * a[1][1] - a[0][1] * a[1][0];
 
-    for (i = 0; i < 3; i++)
+    int minor[n - 1][n - 1];
+    int result = 0;
+
+    for (int col = 0; col < n; col++)
     {
-        for (j = 0; j < 3; j++)
+        int x = 0, y;
+
+        for (int i = 1; i < n; i++)
         {
-            scanf("%d", &a[i][j]);
+            y = 0;
+
+            for (int j = 0; j < n; j++)
+            {
+                if (j != col)
+                    minor[x][y++] = a[i][j];
+            }
+
+            x++;
         }
+
+        if (col % 2 == 0)
+            result += a[0][col] * det(n - 1, minor);
+        else
+            result -= a[0][col] * det(n - 1, minor);
     }
 
-    // Calculate determinant
-    det = a[0][0] * (a[1][1] * a[2][2] - a[1][2] * a[2][1])
-        - a[0][1] * (a[1][0] * a[2][2] - a[1][2] * a[2][0])
-        + a[0][2] * (a[1][0] * a[2][1] - a[1][1] * a[2][0]);
+    return result;
+}
 
-    // Display determinant
-    printf("Determinant = %d\n", det);
+int main()
+{
+    int n;
+
+    printf("Enter n: ");
+    scanf("%d", &n);
+
+    int a[n][n];
+
+    printf("Enter matrix elements:\n");
+
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
+            scanf("%d", &a[i][j]);
+
+    printf("Determinant = %d\n", det(n, a));
 
     return 0;
 }
